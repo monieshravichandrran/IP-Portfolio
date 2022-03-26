@@ -3,9 +3,12 @@
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     min-width: 100%;
     min-height: 100%;
+  }
+  #tablecontain {
+    display: none;
   }
   body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -23,7 +26,7 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     margin-left: 10px;
   }
 
@@ -185,9 +188,12 @@
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     min-width: 100%;
     min-height: 100%;
+  }
+  #tablecontain {
+    display: none;
   }
   body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
@@ -374,7 +380,7 @@
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     min-width: 100%;
     min-height: 100%;
   }

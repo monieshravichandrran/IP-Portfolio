@@ -1,0 +1,593 @@
+@media screen and (min-width: 801px) {
+  html {
+    background-image: url("../images/sea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    height: 100vh;
+    font-family: "Montserrat";
+    font-size: 22px;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-left: 10px;
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  .contfoot {
+    display: flex;
+    justify-content: center;
+  }
+  .active {
+    background-color: #17e3d9;
+  }
+  #head {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 2.5vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+    animation-name: headers;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes headers {
+    0% {
+      left: 0vw;
+      top: 0vw;
+    }
+    33% {
+      left: -20vw;
+      top: 0vw;
+    }
+    66% {
+      left: 20vw;
+      top: 0vw;
+    }
+    100% {
+      left: 0vw;
+      top: 0vw;
+    }
+  }
+
+  .navlist {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5vw;
+    padding: 0.2px;
+  }
+
+  .ulist {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  #navi {
+    margin-top: 2vw;
+    justify-content: center;
+    align-items: center;
+    height: 5vw;
+  }
+
+  .bdy {
+    margin-top: 3vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  #imag {
+    float: left;
+    margin-right: 3vw;
+    width: 25vw;
+    height: 25vw;
+  }
+  .para {
+    font-size: 1.2vw;
+  }
+
+  .paras {
+    font-size: 1.2vw;
+    margin-top: 20px;
+  }
+
+  .footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .footer-basic li {
+    padding: 0 10px;
+  }
+
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+
+  .footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 501px) and (max-width: 800px) {
+  html {
+    background-image: url("../images/sea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    height: 100vh;
+    font-family: Montserrat;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #17e3d9;
+  }
+  #head {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 3.3vw;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    position: relative;
+    animation-name: headers;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes headers {
+    0% {
+      left: 0vw;
+      top: 0vw;
+    }
+    33% {
+      left: -20vw;
+      top: 0vw;
+    }
+    66% {
+      left: 20vw;
+      top: 0vw;
+    }
+    100% {
+      left: 0vw;
+      top: 0vw;
+    }
+  }
+
+  .navlist {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vw;
+    padding: 0.2px;
+  }
+
+  .ulist {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  #navi {
+    margin-top: 2vw;
+    justify-content: center;
+    align-items: center;
+    width: "100%";
+    height: 5vw;
+  }
+
+  .bdy {
+    margin-top: 3vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  #imag {
+    float: left;
+    margin-right: 3vw;
+    width: 35vw;
+    height: 35vw;
+  }
+  .para {
+    font-size: 1.8vw;
+  }
+
+  .paras {
+    font-size: 1.8vw;
+    margin-top: 20px;
+  }
+  .footer-basic {
+    padding: 40px 0;
+    color: #4b4c4d;
+  }
+
+  .footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .footer-basic li {
+    padding: 0 10px;
+  }
+
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  .footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    background-image: url("../images/sea.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 100%;
+  }
+  body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+    height: 100vh;
+    font-family: Montserrat;
+  }
+  * {
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    overflow-x: hidden;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  .active {
+    background-color: #17e3d9;
+  }
+  #head {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 5vw;
+    margin-top: 10px;
+    position: relative;
+    animation-name: headers;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes headers {
+    0% {
+      left: 0vw;
+      top: 0vw;
+    }
+    33% {
+      left: -20vw;
+      top: 0vw;
+    }
+    66% {
+      left: 20vw;
+      top: 0vw;
+    }
+    100% {
+      left: 0vw;
+      top: 0vw;
+    }
+  }
+
+  .navlist {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2vw;
+    padding: 0.2px;
+  }
+
+  .ulist {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  #navi {
+    margin-top: 2vw;
+    justify-content: center;
+    align-items: center;
+    width: "100%";
+    height: 5vw;
+  }
+
+  .bdy {
+    margin-top: 3vw;
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+  #imag {
+    width: 95vw;
+    height: 95vw;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  .para {
+    font-size: 3.5vw;
+  }
+
+  .paras {
+    font-size: 3.5vw;
+    margin-top: 20px;
+  }
+  .footer-basic {
+    padding: 40px 0;
+    color: #4b4c4d;
+  }
+
+  .footer-basic ul {
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+  }
+
+  .footer-basic li {
+    padding: 0 10px;
+  }
+
+  .footer-basic .social {
+    text-align: center;
+    padding-bottom: 25px;
+  }
+  .footer-basic .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 0;
+  }
+}
+
+.history {
+  display: flex;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 900px;
+  position: relative;
+}
+.content-title {
+  font-weight: normal;
+  font-size: 45px;
+  margin-top: -30px;
+  transition: 0.4s;
+  padding: 0 10px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+}
+.btnt {
+  background-color: #002131;
+  border: 1px solid white;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  color: white;
+  margin-bottom: 15px;
+}
+.content-desc {
+  margin: 0;
+  font-size: 15px;
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 1);
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  line-height: 25px;
+}
+.history:before {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  content: "";
+  background: rgba(255, 255, 255, 0.07);
+}
+@media only screen and (max-width: 767px) {
+  .history:before {
+    left: 40px;
+  }
+}
+.item {
+  padding: 40px 0;
+  transition: 0.5s;
+  box-sizing: border-box;
+  width: calc(50% - 40px);
+  display: flex;
+  position: relative;
+}
+.item:before {
+  content: attr(data-text);
+  letter-spacing: 3px;
+  width: 100%;
+  position: absolute;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  top: 70%;
+  margin-top: -5px;
+  padding-left: 15px;
+  right: calc(-100% - 56px);
+}
+.item:nth-child(even) {
+  align-self: flex-end;
+}
+.item:nth-child(even):before {
+  right: auto;
+  text-align: right;
+  left: calc(-100% - 56px);
+  padding-left: 0;
+  border-left: none;
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+  padding-right: 15px;
+}
+.item--active {
+  transform: translateY(0);
+}
+.item--active:before {
+  top: 50%;
+  transition: 0.3s all 0.2s;
+}
+.item--active .content-title {
+  margin: 10px 0 20px 0;
+}
+@media only screen and (max-width: 767px) {
+  .item {
+    align-self: baseline !important;
+    width: 100%;
+    padding: 0 30px 150px 80px;
+  }
+  .item:before {
+    left: 10px !important;
+    padding: 0 !important;
+    top: 50px;
+    text-align: center !important;
+    width: 60px;
+    border: none !important;
+  }
+  .item:last-child {
+    padding-bottom: 40px;
+  }
+}
+.history__img {
+  max-width: 100%;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+.class-container {
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  transition: 0.3s ease 0s;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.class-container:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+}
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 80px;
+  position: relative;
+}
+.header__title {
+  color: #fff;
+  font-size: 46px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
+.header__subtitle {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  margin: 10px 0 0 0;
+  font-weight: normal;
+}

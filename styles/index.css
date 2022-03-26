@@ -3,7 +3,7 @@
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     min-width: 100%;
     min-height: 100%;
   }
@@ -175,7 +175,7 @@
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     min-width: 100%;
     min-height: 100%;
   }
@@ -346,7 +346,7 @@
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
+    overflow-x: hidden;
     min-width: 100%;
     min-height: 100%;
   }
