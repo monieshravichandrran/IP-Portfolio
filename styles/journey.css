@@ -145,7 +145,7 @@
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 501px) and (max-width: 800px) {
+@media screen and (min-width: 700px) and (max-width: 800px) {
   html {
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
@@ -292,7 +292,7 @@
     margin-bottom: 0;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   html {
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
