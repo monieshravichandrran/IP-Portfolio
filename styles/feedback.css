@@ -7,9 +7,6 @@
     min-width: 100%;
     min-height: 100%;
   }
-  #tablecontain {
-    display: none;
-  }
   body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
     height: 100vh;
@@ -26,10 +23,9 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     margin-left: 10px;
   }
-
   li {
     float: left;
   }
@@ -44,7 +40,10 @@
   li a:hover:not(.active) {
     background-color: #111;
   }
-
+  .contfoot {
+    display: flex;
+    justify-content: center;
+  }
   .active {
     background-color: #17e3d9;
   }
@@ -53,7 +52,8 @@
     text-align: center;
     align-items: center;
     font-size: 2.5vw;
-    margin-top: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
     position: relative;
     animation-name: headers;
     animation-duration: 3s;
@@ -169,22 +169,50 @@
     color: #aaa;
     margin-bottom: 0;
   }
-  table {
-    border: 1px solid;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    padding: 10px;
-    margin-bottom: 100px;
+  .feeddiv {
+    display: flex;
+    justify-content: center;
   }
-  th,
-  td {
+  .formconta {
     border: 1px solid;
+    padding: 30px;
+  }
+  .inp {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-left: 35px;
+    width: 13vw;
+    color: white;
+    background: none;
+    padding: 3px;
+  }
+  #inp1 {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-left: 40px;
+    width: 20vw;
+    color: white;
+    background: none;
+    padding: 3px;
+  }
+  .labcont {
+    margin-bottom: 20px;
+  }
+  .feedinp {
+    min-height: 100px;
+    width: 20vw;
     padding: 10px;
+    background: none;
+    margin-bottom: 40px;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    vertical-align: text-top;
   }
 }
-
-@media screen and (max-width: 801px) {
+@media screen and (max-width: 800px) {
   html {
     background-image: url("../images/sea.jpg");
     background-repeat: no-repeat;
@@ -311,22 +339,64 @@
     margin-right: 2vw;
   }
   #imag {
-    float: left;
-    margin-right: 3vw;
-    width: 35vw;
-    height: 35vw;
+    width: 95vw;
+    height: 95vw;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
   .para {
-    font-size: 1.5vw;
+    font-size: 3.5vw;
   }
 
   .paras {
-    font-size: 1.5vw;
+    font-size: 3.5vw;
     margin-top: 20px;
   }
   .footer-basic {
     padding: 40px 0;
     color: #4b4c4d;
+  }
+  .feeddiv {
+    display: flex;
+    justify-content: center;
+  }
+  .formconta {
+    border: 1px solid;
+    padding: 30px;
+  }
+  .inp {
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-left: 35px;
+    width: 30vw;
+    color: white;
+    background: none;
+    padding: 3px;
+  }
+  #inp1 {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid;
+    margin-left: 40px;
+    width: 40vw;
+    color: white;
+    background: none;
+    padding: 3px;
+  }
+  .labcont {
+    margin-bottom: 20px;
+  }
+  .feedinp {
+    min-height: 100px;
+    width: 40vw;
+    padding: 10px;
+    background: none;
+    margin-bottom: 40px;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
+    vertical-align: text-top;
   }
 
   .footer-basic ul {
@@ -353,23 +423,8 @@
     color: #aaa;
     margin-bottom: 0;
   }
-  table {
-    border: 1px solid;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
-    padding: 5px;
-    margin-bottom: 30px;
-  }
-  th,
-  td {
-    border: 1px solid;
-    padding: 5px;
-  }
-  #tabcont {
-    display: none !important;
-  }
 }
+
 .history__img {
   max-width: 100%;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
