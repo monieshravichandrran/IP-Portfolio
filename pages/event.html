@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moniesh Ravichandran</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="../styles/event.css" />
+    <script src="../script/event.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li><a href="./index.html">Information</a></li>
+      <li><a href="./journey.html">Journey</a></li>
+      <li><a href="./interst.html">Interests</a></li>
+      <li><a href="./academics.html">Academics</a></li>
+      <li><a href="./feedback.html">Feedback</a></li>
+      <li><a class="active" href="./event.html">Event</a></li>
+    </ul>
+    <div class="class-container" id="container">
+      <div class="header">
+        <h2 class="header__title">
+          Instincts 2022
+        </h2>
+        <h3 class="header__subtitle">
+          The registrations are open
+          <i class="fa fa-hand-o-down" style="font-size: 25px;"></i>
+        </h3>
+      </div>
+    </div>
+    <form class="form_container">
+      <fieldset class="fields">
+        <legend>Instincts 2022</legend>
+        <div class="field">
+          <label>Name : </label>
+          <input
+            onblur="nameCheck()"
+            onfocus="nameFocus()"
+            class="inpu"
+            type="text"
+            id="names"
+            name="name"
+            placeholder="Name"
+          />
+          <br />
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="er1"
+          >
+            The name should contain only letters
+          </p>
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="req1"
+          >
+            Name is required
+          </p>
+        </div>
+        <div class="field">
+          <label>College : </label>
+          <input
+            onblur="clgCheck()"
+            onfocus="clgFocus()"
+            class="inpu"
+            type="text"
+            id="clg"
+            name="college"
+            placeholder="College Name"
+          />
+          <br />
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="er2"
+          >
+            Clg name should contain only letters
+          </p>
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="req2"
+          >
+            Clg Name is required
+          </p>
+        </div>
+        <div class="field">
+          <label style="margin-bottom: 10px;">College Address : </label>
+          <br />
+          <textarea
+            onselect="selectAddress()"
+            style="color: black;"
+            rows="4"
+            colums="60"
+            id="textaid"
+            name="addr"
+            placeholder="College Address"
+          ></textarea>
+        </div>
+        <div class="field">
+          <label>ZIP Code : </label>
+          <input
+            onblur="pinBlur()"
+            onfocus="pinFocus()"
+            class="inpu"
+            type="text"
+            name="zip"
+            placeholder="Pin Code"
+            id="pin"
+          />
+          <br />
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="er3"
+          >
+            PinCode should be 6 digit integer
+          </p>
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="req3"
+          >
+            PinCode is required
+          </p>
+        </div>
+        <div class="field">
+          <label>Age : </label>
+          <input
+            onkeypress="ageKey(event)"
+            onfocus="ageFocus()"
+            onblur="ageBlur()"
+            id="aged"
+            class="inpu"
+            type="text"
+            name="age"
+            placeholder="Age"
+          />
+          <br />
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="er4"
+          >
+            Enter Valid Age [18-150]
+          </p>
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="req4"
+          >
+            Age is required
+          </p>
+        </div>
+        <div class="field">
+          <label>DOB : </label>
+          <input
+            class="inpu"
+            type="date"
+            name="dob"
+            placeholder="Date Of Birth"
+          />
+        </div>
+        <br />
+        <div style="margin-bottom: 10px;">
+          <label style="margin-right: 20px;">Gender: </label>
+          <input type="radio" name="gender" value="male" />
+          <label style="margin-right: 20px;">Male</label>
+          <input type="radio" name="gender" value="male" />
+          <label>Female</label>
+        </div>
+        <div style="margin-top: 20px;">
+          <label style="margin-top: 10px;">Department : </label>
+          <select class="inpu" name="dept" id="dept">
+            <option value="CSE">CSE</option>
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="MECH">MECH</option>
+            <option value="EEE">EEE</option>
+            <option value="CHEM">CHEM</option>
+            <option value="BME">BME</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Phone : </label>
+          <input
+            onblur="phoneBlur()"
+            onfocus="phoneFocus()"
+            class="inpu"
+            type="text"
+            name="pho"
+            placeholder="Phone"
+          />
+        </div>
+        <div class="field">
+          <label>Email : </label>
+          <input
+            class="inpu"
+            autocomplete="true"
+            type="email"
+            name="pho"
+            placeholder="Email"
+          />
+        </div>
+      </fieldset>
+    </form>
+    <div class="footer-basic">
+      <footer>
+        <div class="social">
+          <a href="https://instagram.com/iammoniesh208" target="_blank"
+            ><i class="fa fa-instagram" style="font-size: 25px;"></i
+          ></a>
+          <a
+            ><i
+              class="fa fa-twitter"
+              style="font-size: 25px; margin-left: 25px;"
+            ></i
+          ></a>
+          <a
+            ><i
+              class="fa fa-github"
+              style="font-size: 25px; margin-left: 25px;"
+            ></i></a
+          ><a href="www.linkedin.com/in/moniesh" target="_blank"
+            ><i
+              class="fa fa-linkedin"
+              style="font-size: 25px; margin-left: 25px;"
+            ></i
+          ></a>
+        </div>
+        <ul class="list-inline">
+          <li class="list-inline-item">
+            <a href="./projects.html">Projects</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="./workexp.html">Work Experience</a>
+          </li>
+          <li class="list-inline-item"><a href="#" target="_blank">SSN</a></li>
+          <li class="list-inline-item">
+            <a href="mailto:monieshravichandrran@gmail.com" target="_blank"
+              >Email me</a
+            >
+          </li>
+        </ul>
+        <p class="copyright">Moniesh Ravichandran 2022</p>
+      </footer>
+    </div>
+  </body>
+</html>
