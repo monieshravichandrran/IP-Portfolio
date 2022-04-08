@@ -83,12 +83,36 @@ const ageBlur = () => {
 
 const phoneBlur = () => {
   document.getElementById("pho").style.borderBottom = "1px solid";
+  const name = document.getElementById("pho").value;
+  if (name) {
+    const x = name.match(/^[0-9]{10}$/);
+    if (!x) document.getElementById("er5").style.display = "block";
+  } else {
+    document.getElementById("req5").style.display = "block";
+  }
 };
 
 const phoneFocus = () => {
   document.getElementById("req5").style.display = "none";
   document.getElementById("er5").style.display = "none";
   document.getElementById("pho").style.borderBottom = "3px solid #90EE90";
+};
+
+const emailblur = () => {
+  document.getElementById("emai").style.borderBottom = "1px solid";
+  const name = document.getElementById("emai").value;
+  if (name) {
+    const x = name.match(/^.*\@.*$/);
+    if (!x) document.getElementById("er6").style.display = "block";
+  } else {
+    document.getElementById("req6").style.display = "block";
+  }
+};
+
+const emailfocus = () => {
+  document.getElementById("req6").style.display = "none";
+  document.getElementById("er6").style.display = "none";
+  document.getElementById("emai").style.borderBottom = "3px solid #90EE90";
 };
 
 function dragskill(ev) {
@@ -108,7 +132,8 @@ function allowDrop(ev) {
   ev.preventDefault();
 }
 
-const reset = () => {
+const reset = (event) => {
+  event.preventDefault();
   document.getElementById("names").value = undefined;
   document.getElementById("clg").value = undefined;
   document.getElementById("textaid").value = undefined;
@@ -169,7 +194,7 @@ const reset = () => {
   </li>
   <li
     id="skid7"
-    class="listitemskill"
+    class="listitemskill" 
     draggable="true"
     ondragstart="dragskill(event)"
   >
@@ -207,7 +232,9 @@ const validate = () => {
   );
 };
 
-const submit = () => {
+const submit = async (ev) => {
+  ev.preventDefault();
+  console.log("hello");
   document.getElementById("toterr").style.display = "none";
   const x1 = document.getElementById("names").value;
   const x2 = document.getElementById("clg").value;
@@ -234,6 +261,20 @@ const submit = () => {
   else {
     const check = validate();
     if (check) {
+      const x = {
+        name: x1,
+        clg: x2,
+        clgad: x3,
+        pin: x4,
+        age: x5,
+        dob: x6,
+        phone: x7,
+        email: x8,
+        form: x9,
+        skills: x10
+      };
+      await localStorage.setItem("data", x);
+      window.location.href = "./sample.html";
     } else {
       document.getElementById("toterr").style.display = "block";
     }

@@ -260,6 +260,7 @@
           <input
             onblur="phoneBlur()"
             onfocus="phoneFocus()"
+            onchange="phoneBlur()"
             class="inpu"
             type="text"
             name="pho"
@@ -296,6 +297,9 @@
             class="inpu"
             autocomplete="true"
             type="email"
+            onblur="emailblur()"
+            onfocus="emailfocus()"
+            onchange="emailblur()"
             name="pho"
             id="emai"
             placeholder="Email"
@@ -404,13 +408,14 @@
           />
         </div>
         <div class="field" id="btcont">
-          <button class="subbtn">Submit</button>
-          <button class="resbtn" onclick="reset()">Reset</button>
+          <button onclick="submit(event)" class="subbtn">Submit</button>
+          <button class="resbtn" onclick="reset(event)">Reset</button>
           <br />
           <p id="toterr" style="display: none;">Form has invalid entries</p>
         </div>
       </fieldset>
     </form>
+    <a href="./sample.html">Link</a>
     <div class="footer-basic">
       <footer>
         <div class="social">
