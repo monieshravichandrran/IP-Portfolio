@@ -15,6 +15,35 @@
     <script src="../script/event.js"></script>
   </head>
   <body>
+    <script>
+      setInterval(showTime, 1000);
+      function showTime() {
+        let time = new Date();
+        let hour = time.getHours();
+        let min = time.getMinutes();
+        let sec = time.getSeconds();
+        am_pm = "AM";
+
+        if (hour > 12) {
+          hour -= 12;
+          am_pm = "PM";
+        }
+        if (hour == 0) {
+          hr = 12;
+          am_pm = "AM";
+        }
+
+        hour = hour < 10 ? "0" + hour : hour;
+        min = min < 10 ? "0" + min : min;
+        sec = sec < 10 ? "0" + sec : sec;
+
+        let currentTime = hour + ":" + min + ":" + sec + am_pm;
+
+        document.getElementById("clock").innerHTML = currentTime;
+      }
+
+      showTime();
+    </script>
     <ul>
       <li><a href="./index.html">Information</a></li>
       <li><a href="./journey.html">Journey</a></li>
@@ -34,6 +63,7 @@
         </h3>
       </div>
     </div>
+    <div id="clock"></div>
     <form class="form_container">
       <fieldset class="fields">
         <legend>Instincts 2022</legend>
@@ -42,6 +72,7 @@
           <input
             onblur="nameCheck()"
             onfocus="nameFocus()"
+            onchange="nameCheck()"
             class="inpu"
             type="text"
             id="names"
@@ -77,6 +108,7 @@
           <input
             onblur="clgCheck()"
             onfocus="clgFocus()"
+            onchange="clgCheck()"
             class="inpu"
             type="text"
             id="clg"
@@ -125,6 +157,7 @@
           <input
             onblur="pinBlur()"
             onfocus="pinFocus()"
+            onchange="pinBlur()"
             class="inpu"
             type="text"
             name="zip"
@@ -161,6 +194,7 @@
             onkeypress="ageKey(event)"
             onfocus="ageFocus()"
             onblur="ageBlur()"
+            onchange="ageBlur()"
             id="aged"
             class="inpu"
             type="text"
@@ -197,6 +231,7 @@
             class="inpu"
             type="date"
             name="dob"
+            id="dob"
             placeholder="Date Of Birth"
           />
         </div>
@@ -228,8 +263,32 @@
             class="inpu"
             type="text"
             name="pho"
+            id="pho"
             placeholder="Phone"
           />
+          <br />
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="er5"
+          >
+            Enter Valid Phone Number
+          </p>
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="req5"
+          >
+            Phone is required
+          </p>
         </div>
         <div class="field">
           <label>Email : </label>
@@ -238,8 +297,117 @@
             autocomplete="true"
             type="email"
             name="pho"
+            id="emai"
             placeholder="Email"
           />
+          <br />
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="er6"
+          >
+            Enter Valid Email
+          </p>
+          <p
+            style="
+              color: red;
+              display: none;
+              margin-top: 2px;
+              font-size: small;
+            "
+            id="req6"
+          >
+            Email is required
+          </p>
+        </div>
+        <div class="field">
+          <label>Skills : </label>
+          <div class="skillist" id="skillsd">
+            <ul class="listskill">
+              <li
+                id="skid1"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                C++
+              </li>
+              <li
+                id="skid2"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                JS
+              </li>
+              <li
+                id="skid3"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                React
+              </li>
+              <li
+                id="skid4"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                Python
+              </li>
+              <li
+                id="skid5"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                NodeJS
+              </li>
+              <li
+                id="skid6"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                SQL
+              </li>
+              <li
+                id="skid7"
+                class="listitemskill"
+                draggable="true"
+                ondragstart="dragskill(event)"
+              >
+                MongoDB
+              </li>
+            </ul>
+            <ul
+              id="skillid"
+              ondrop="drop(event)"
+              ondragover="allowDrop(event)"
+              class="resbox"
+            ></ul>
+          </div>
+        </div>
+        <div class="field">
+          <label>Upload Consent Letter : </label>
+          <input
+            class="inpu"
+            type="file"
+            id="consent"
+            name="consent"
+            placeholder="Consent letter"
+          />
+        </div>
+        <div class="field" id="btcont">
+          <button class="subbtn">Submit</button>
+          <button class="resbtn" onclick="reset()">Reset</button>
+          <br />
+          <p id="toterr" style="display: none;">Form has invalid entries</p>
         </div>
       </fieldset>
     </form>

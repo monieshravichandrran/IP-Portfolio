@@ -208,6 +208,67 @@
     outline: none;
     color: white;
   }
+  .listskill {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+    width: 40%;
+    min-height: 70px;
+    border: 0.5px solid;
+    margin-right: 20px;
+    float: left;
+    list-style: none;
+  }
+  .listitemskill {
+    background-color: white;
+    padding: 2px;
+    font-size: medium;
+    border: 1px solid slateblue;
+    border-radius: 3px;
+    color: black;
+    margin: 2px;
+  }
+  .skillid {
+    width: 40%;
+    height: 100px;
+    float: left;
+  }
+  .resbox {
+    width: 40%;
+    min-height: 70px;
+    border: 1px solid;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+  #clock {
+    float: right;
+    font-size: 50px;
+    width: 300px;
+    margin-right: 10vw;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+  }
+  .subbtn {
+    background-color: #17e3d9;
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+    width: 100px;
+    margin: auto;
+  }
+  .resbtn {
+    background-color: red;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    width: 100px;
+    margin: auto;
+  }
+  #btcont {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 801px) {
@@ -420,6 +481,67 @@
     border-bottom: 1px solid white;
     outline: none;
     color: white;
+  }
+  .listskill {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+    width: 40%;
+    min-height: 70px;
+    border: 0.5px solid;
+    margin-right: 20px;
+    float: left;
+    list-style: none;
+  }
+  .listitemskill {
+    background-color: white;
+    padding: 2px;
+    font-size: medium;
+    border: 1px solid slateblue;
+    border-radius: 3px;
+    color: black;
+    margin: 2px;
+  }
+  .skillid {
+    width: 40%;
+    height: 100px;
+    float: left;
+  }
+  .resbox {
+    width: 40%;
+    min-height: 70px;
+    border: 1px solid;
+    margin-left: 20px;
+    border-radius: 5px;
+  }
+  #clock {
+    float: right;
+    font-size: 50px;
+    width: 300px;
+    margin-right: 10vw;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 2px solid;
+    border-radius: 20px;
+  }
+  .subbtn {
+    background-color: #17e3d9;
+    padding: 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+    width: 100px;
+    margin: auto;
+  }
+  .resbtn {
+    background-color: red;
+    padding: 10px;
+    margin-left: 10px;
+    border-radius: 7px;
+    width: 100px;
+    margin: auto;
+  }
+  #btcont {
+    margin-top: 20px;
   }
 }
 .history__img {
