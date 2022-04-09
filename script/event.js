@@ -232,9 +232,8 @@ const validate = () => {
   );
 };
 
-const submit = async (ev) => {
+const submits = async (ev) => {
   ev.preventDefault();
-  console.log("hello");
   document.getElementById("toterr").style.display = "none";
   const x1 = document.getElementById("names").value;
   const x2 = document.getElementById("clg").value;
@@ -246,19 +245,17 @@ const submit = async (ev) => {
   const x8 = document.getElementById("emai").value;
   const x9 = document.getElementById("consent").value;
   const x10 = document.getElementById("skillid").innerHTML;
-  if (
-    x1 != undefined &&
-    x2 != undefined &&
-    x3 != undefined &&
-    x4 != undefined &&
-    x5 != undefined &&
-    x6 != undefined &&
-    x7 != undefined &&
-    x8 != undefined &&
-    x9 != undefined
-  )
-    document.getElementById("toterr").style.display = "block";
-  else {
+  const x11 = document.querySelector("input[name=gender]:checked").value;
+  const x12 = document.getElementById("dept").value;
+  const x13 = document.querySelectorAll("input[type=checkbox]:checked");
+  console.log(x13);
+  if (x1 && x2 && x3 && x4 && x5 && x6 && x7 && x8 && x9 && x11 && x12 && x13) {
+    let x14 = "";
+    for (let i = 0; i < x13.length; i++) {
+      x14 += x13[i].value;
+      x14 += " ";
+    }
+    console.log(x14);
     const check = validate();
     if (check) {
       const x = {
@@ -271,9 +268,13 @@ const submit = async (ev) => {
         phone: x7,
         email: x8,
         form: x9,
-        skills: x10
+        skills: x10,
+        gender: x11,
+        dept: x12,
+        hobbies: x14
       };
-      await localStorage.setItem("data", x);
+      console.log(x);
+      await localStorage.setItem("data", JSON.stringify(x));
       window.location.href = "./sample.html";
     } else {
       document.getElementById("toterr").style.display = "block";

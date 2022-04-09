@@ -20,7 +20,9 @@
       <li><a href="./pages/interst.html">Interests</a></li>
       <li><a href="./pages/academics.html">Academics</a></li>
       <li><a href="./pages/feedback.html">Feedback</a></li>
-      <li><a href="./pages/event.html">Event</a></li>
+      <li style="display: block;" id="event">
+        <a href="./pages/event.html">Event</a>
+      </li>
     </ul>
     <div class="class-container" id="container">
       <div class="header">
@@ -101,5 +103,12 @@
         <p class="copyright">Moniesh Ravichandran 2022</p>
       </footer>
     </div>
+    <script>
+      const now = new Date();
+      const till = new Date(2022, 4, 2);
+      if (now >= till) {
+        document.getElementById("event").style.display = "none";
+      }
+    </script>
   </body>
 </html>

@@ -64,7 +64,11 @@
       </div>
     </div>
     <div id="clock"></div>
-    <form class="form_container">
+    <form
+      class="form_container"
+      onsubmit="submits(event);return false;"
+      action=""
+    >
       <fieldset class="fields">
         <legend>Instincts 2022</legend>
         <div class="field">
@@ -240,13 +244,15 @@
           <label style="margin-right: 20px;">Gender: </label>
           <input type="radio" name="gender" value="male" />
           <label style="margin-right: 20px;">Male</label>
-          <input type="radio" name="gender" value="male" />
+          <input type="radio" name="gender" value="female" />
           <label>Female</label>
+          <input type="radio" name="gender" value="others" />
+          <label>Others</label>
         </div>
         <div style="margin-top: 20px;">
           <label style="margin-top: 10px;">Department : </label>
           <select class="inpu" name="dept" id="dept">
-            <option value="CSE">CSE</option>
+            <option value="CSE" selected>CSE</option>
             <option value="IT">IT</option>
             <option value="ECE">ECE</option>
             <option value="MECH">MECH</option>
@@ -397,6 +403,16 @@
             ></ul>
           </div>
         </div>
+        <div style="margin-left: 1vw;">
+          <label style="margin-bottom: 15px;">Hobbies</label>
+          <br />
+          <input type="checkbox" id="hobby1" name="v1" value="Cycling" />
+          <label for="v1">Cycling</label><br />
+          <input type="checkbox" id="hobby2" name="v2" value="Reading Books" />
+          <label for="v2">Read Books</label><br />
+          <input type="checkbox" id="hobby3" name="v3" value="Play Cricket" />
+          <label for="v3">Play Cricket</label><br /><br />
+        </div>
         <div class="field">
           <label>Upload Consent Letter : </label>
           <input
@@ -408,14 +424,17 @@
           />
         </div>
         <div class="field" id="btcont">
-          <button onclick="submit(event)" class="subbtn">Submit</button>
-          <button class="resbtn" onclick="reset(event)">Reset</button>
+          <button class="subbtn" type="submit">
+            Submit
+          </button>
+          <input class="resbtn" type="reset" />
           <br />
-          <p id="toterr" style="display: none;">Form has invalid entries</p>
         </div>
+        <p id="toterr" style="display: none; color: red;">
+          Form has invalid entries
+        </p>
       </fieldset>
     </form>
-    <a href="./sample.html">Link</a>
     <div class="footer-basic">
       <footer>
         <div class="social">

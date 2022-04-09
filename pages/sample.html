@@ -15,65 +15,6 @@
     <script src="../script/event.js"></script>
   </head>
   <body>
-    <script>
-      const getVal = async () => {
-        const data = await localStorage.getItem("data");
-        document.getElementById("tab").innerHTML = `
-        <tr>
-        <th>Fields</th>
-        <th>Response</th>
-      </tr>
-      <tr>
-        <td>Name</td>
-        <td>Moniesh</td>
-      </tr>
-      <tr>
-        <td>College</td>
-        <td>SSN</td>
-      </tr>
-      <tr>
-        <td>College Address</td>
-        <td>4/501 MMDA HIG PLOTS MADHURAVOYAL</td>
-      </tr>
-      <tr>
-        <td>ZIP Code</td>
-        <td>600095</td>
-      </tr>
-      <tr>
-        <td>Age</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>Date of Birth</td>
-        <td>20/08/2001</td>
-      </tr>
-      <tr>
-        <td>Gender</td>
-        <td>MALE</td>
-      </tr>
-      <tr>
-        <td>Department</td>
-        <td>CSE</td>
-      </tr>
-      <tr>
-        <td>Phone</td>
-        <td>638180111</td>
-      </tr>
-      <tr>
-        <td>Email</td>
-        <td>tgravi30@gmail.com</td>
-      </tr>
-      <tr>
-        <td>Skills</td>
-        <td>C++, JS</td>
-      </tr>
-      <tr>
-        <td>File</td>
-        <td>bp.pdf</td>
-      </tr>
-        `;
-      };
-    </script>
     <ul>
       <li><a href="./index.html">Information</a></li>
       <li><a href="./journey.html">Journey</a></li>
@@ -135,5 +76,97 @@
         <p class="copyright">Moniesh Ravichandran 2022</p>
       </footer>
     </div>
+    <script>
+      const getVal = async () => {
+        console.log("hellohdg");
+        const data = await localStorage.getItem("data");
+        const datas = JSON.parse(data);
+        console.log(datas.pin);
+        document.getElementById("tab").innerHTML =
+          `
+          <tr>
+          <th>Fields</th>
+          <th>Response</th>
+        </tr>
+        <tr>
+          <td>Name</td>
+          <td>` +
+          datas.name +
+          `</td>
+        </tr>
+        <tr>
+          <td>College</td>
+          <td>` +
+          datas.clg +
+          `</td>
+        </tr>
+        <tr>
+          <td>College Address</td>
+          <td>` +
+          datas.clgad +
+          `</td>
+        </tr>
+        <tr>
+          <td>ZIP Code</td>
+          <td>` +
+          datas.pin +
+          `</td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td>` +
+          datas.age +
+          `</td>
+        </tr>
+        <tr>
+          <td>Date of Birth</td>
+          <td>` +
+          datas.dob +
+          `</td>
+        </tr>
+        <tr>
+          <td>Gender</td>
+          <td>` +
+          datas.gender +
+          `</td>
+        </tr>
+        <tr>
+          <td>Department</td>
+          <td>` +
+          datas.dept +
+          `</td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td>` +
+          datas.phone +
+          `</td>
+        </tr>
+        <tr>
+          <td>Email</td>
+          <td>` +
+          datas.email +
+          `</td>
+        </tr>
+        <tr>
+          <td>Skills</td>
+          <td>` +
+          datas.skills +
+          `</td>
+        </tr>
+        <tr>
+          <td>Hobbies</td>
+          <td>` +
+          datas.hobbies +
+          `</td>
+        </tr>
+        <tr>
+          <td>File</td>
+          <td>Uploaded</td>
+        </tr>
+          `;
+      };
+      getVal();
+    </script>
   </body>
 </html>

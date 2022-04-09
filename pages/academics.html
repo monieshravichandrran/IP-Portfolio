@@ -134,5 +134,12 @@
         <p class="copyright">Moniesh Ravichandran 2022</p>
       </footer>
     </div>
+    <script>
+      const now = new Date();
+      const till = new Date(2022, 4, 2);
+      if (now >= till) {
+        document.getElementById("event").style.display = "none";
+      }
+    </script>
   </body>
 </html>
